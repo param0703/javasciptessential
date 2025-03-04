@@ -7,6 +7,11 @@ function inc_count(){
 function display_count(){
     document.getElementById("count_display").innerHTML=count;
 }
+function reset(){
+    count=0;
+    alert("Reseted");
+    display_count();
+}
 function check(){
     if(count===10){
         alert("Gotch 10 points");
