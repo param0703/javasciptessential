@@ -45,4 +45,5 @@ function endTest() {
     var button = document.getElementById("btn");
     button.innerHTML = "Start Test";
     button.onclick = startTest;
+
 }
