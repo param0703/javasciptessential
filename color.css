@@ -1,0 +1,97 @@
+
+        /* Main container styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #3498db; /* Blue background */
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 600px; /* Reduced from 800px */
+            margin: 0 auto;
+            padding: 15px; /* Reduced padding */
+        }
+
+        /* Card grid styling */
+        #game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 8px; /* Reduced gap */
+            background-color: white;
+            padding: 15px; /* Reduced padding */
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Individual card styling */
+        .card {
+            aspect-ratio: 1/1;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px; /* Smaller font */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            /* Set explicit small size */
+            height: 50px; /* Smaller fixed height */
+            max-height: 50px;
+            width: 112px;
+        }
+
+        .card:hover {
+            background-color: #d0d0d0;
+        }
+
+        .matched {
+            opacity: 0.7;
+        }
+
+        /* Game info section */
+        .game-info {
+            color: white;
+            text-align: right;
+        }
+
+        #score, #timer {
+            font-size: 20px; /* Smaller font */
+            margin-bottom: 12px;
+        }
+
+        /* Button styling */
+        #startbtn {
+            background-color: white;
+            color: #3498db;
+            border: none;
+            padding: 8px 16px; /* Smaller padding */
+            font-size: 14px; /* Smaller font */
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #startbtn:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            #game-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .card {
+                height: 40px; /* Even smaller on mobile */
+            }
+        }
+
+        @media (max-width: 400px) {
+            #game-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .card {
+                height: 35px; /* Smallest size on small mobile */
+            }
+        }
